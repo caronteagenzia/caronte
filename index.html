@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <script src="jquery.min.js"></script>
+
+    <style>
+
+    #user{
+      top: 45%;left: 50%;
+      position:absolute;
+      transform:translate(-50%,-50%);
+      width: 250px;height: 40px;
+      border:0;
+      color: white;
+      border-bottom:2px solid white;
+      font-size: 20px;
+      font-family: avenir;
+      background:rgba(0,0,0,0);
+    }
+    #VIA{
+      top: 55%;left: 50%;
+      position:absolute;
+      transform:translate(-50%,-50%);
+      width: 250px;height: 40px;
+      font-weight: bold;
+      font-size: 16;
+
+    }
+
+    </style>
+
+    </head>
+
+    <body>
+<div>
+      <img src="assets/img/gifprova.gif" style="width:100%">
+      <input type="text"  id="user" value="Inserisci il tuo codice" onfocus="javascript:if(this.value=='Inserisci il tuo codice')this.value='';"/>
+      <button id="VIA" onClick="beat()">INVIA</button>
+</div>
+
+
+        <script>
+        function beat(){
+
+var content=document.getElementById("user");
+
+if(content.value=="a"){
+
+window.location.href="desti-perf.html";}else{
+  if(content.value=="b"){
+
+  window.location.href="desti-equi.html";}else {
+   if(content.value=="c"){
+
+  window.location.href="desti-risca.html";}
+}
+
+}
+}
+        </script>
+
+    </body>
+
+</html>
