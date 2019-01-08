@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>CARONTE - VIAGGI DI SOLA ANDATA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "avenir", sans-serif}
+.mySlides {display: none}
+.learn-more-btn { background: #6e6a65; padding: 20px 40px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; color: #e0d4cb; text-transform: uppercase; letter-spacing: 1px; display: inline-block; -webkit-box-shadow: 0px 3px 0px 0px #e0d4cb; -moz-box-shadow: 0px 3px 0px 0px #e0d4cb; box-shadow: 0px 3px 0px 0px #e0d4cb; margin: 60px 0 0; font-weight: bold; }
+.learn-more-btn:hover, .learn-more-btn:focus { background: #3d3d3d; color: #e0d4cb; }
+
+* { box-sizing:border-box; }
+
+/* basic stylings ------------------------------------------ */
+body 				 { background:url(https://scotch.io/wp-content/uploads/2014/07/61.jpg); }
+.container 		{
+
+width:600px;
+  margin:30px auto 0;
+  display:block;
+  background:#e0d4cb;
+  padding:10px 50px 50px;
+}
+
+
+
+/* form starting stylings ------------------------------- */
+.group 			  {
+  position:relative;
+
+  margin-bottom:45px;
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  background:#e0d4cb;
+  display:block;
+  width:500px;
+  border:none;
+  border-bottom:1px solid #6e6a65;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#6e6a65;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#6e6a65;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:500px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#6e6a65;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#6e6a65; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#6e6a65; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#6e6a65; }
+  to 	{ width:0; background:transparent; }
+}
+</style>
+<body>
+
+
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;background-color: #3C3D3D;color:#6e6a65;">
+  <div style="padding-left: 70px; padding-top:30px;padding-bottom:50px;">
+    <a class="header--logo" href="index.html">
+      <img src="assets/img/logo.png" style="width:120px" alt="caronte">
+    </a>
+  </div>
+
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:900px; background-color:#E0D4CB">
+
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">IL CONTRATTO</h2>
+    <p class="w3-opacity"><i>xxxx</i></p>
+    <p class="w3-justify">Non temere la morte: è solo un passaggio, una porta verso una nuova esistenza. Affidati a noi per avere la speranza di una vita oltre la vita, di una realtà dopo la fine. Questo contratto,
+punto d’incontro tra la vita e l’aldilà, tra il terreno e lo straordinario, sancisce la meta del tuo ultimo viaggio. Dopo averlo firmato e spedito in agenzia, inizieremo ad avviare le pratiche affinché tutto sia pronto per quel giorno. Saremo noi ad occuparci del tuo trasferimento dopo la vita. Non ti lasceremo da solo. Ti chiediamo solo di credere senza esitazione all’esistenza dell’oltrevita e di avere completa fiducia in noi, testimoniando sempre a favore e in sostegno di Caronte.
+</p>
+<p class="w3-justify">Se il nostro rapporto sarà compromesso, ci riserviamo il diritto di recedere dalle responsabilità di questo contratto.Se questo dovesse accadere (cosa che non vogliamo), non potremo proteggerti dall’oblio e dal timore della fine. </p>
+<p class="w3-justify">Giudicheremo inoltre il tuo passato e la tua condotta prima di accettarti come cliente effettivo.</p>
+<p class="w3-justify">Vogliamo infine precisare che il servizio offerto, non avendo una durata finita, è da considerarsi eterno.</p>
+
+
+<div class="container ">
+  <form >
+
+    <div class="group">
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Name (es: Alice Rossi)</label>
+    </div>
+    <div class="group">
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Data di nascita（es: gg／mm／aaaa）</label>
+    </div>
+    <div class="group">
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Numero di telefono</label>
+    </div>
+    <div class="group">
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Indirizzo di casa</label>
+    </div>
+    <div class="group">
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Email</label>
+    </div>
+  </form>
+</div>
+
+
+
+
+<p class="w3-justify"><b>Si prega di selezionare il prodotto che si desidera acquistare:</b></p>
+
+  </div>
+
+  <!-- The Tour Section -->
+  <div  id="tour">
+    <div class="w3-container w3-content" style="max-width:800px">
+      <div class="w3-row-padding " style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="assets/img/op-perf.png" alt="SUBLIME PERFEZIONE" style="width:100%" >
+          <div class="w3-container" style="background-color:#6e6a65; color:#E0D4CB">
+            <p class="w3-center"><b>SUBLIME PERFEZIONE</b></p>
+            <p class="w3-opacity w3-center">LA VIA DEL PIACERE</p>
+            <input class="w3-check" type="checkbox" checked name="Like">
+          <label>Io scelgo questo!</label>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="assets/img/op-equi.png" alt="EQUILIBRIO CELESTE" style="width:100%" >
+          <div class="w3-container" style="background-color:#6e6a65; color:#E0D4CB">
+            <p class="w3-center"><b>EQUILIBRIO CELESTE</b></p>
+            <p class="w3-opacity w3-center">LA VIA DELLO SPIRITO</p>
+            <input class="w3-check" type="checkbox" checked name="Like">
+            <label >Io scelgo questo!</label>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="assets/img/op-risca.png" alt="ETERNO RISCATTO" style="width:100%" >
+          <div class="w3-container" style="background-color:#6e6a65; color:#E0D4CB">
+            <p class="w3-center"><b>ETERNO RISCATTO</b></p>
+            <p class="w3-opacity w3-center">LA VIA DEL SACRIFICIO</p>
+            <input class="w3-check" type="checkbox" checked name="Like">
+            <label >Io scelgo questo!</label>
+          </div>
+        </div>
+      </div>
+      <button class="learn-more-btn w3-center" onclick="document.getElementById('ticketModal').style.display='block'">Determina</button>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+  <!-- Ticket Modal -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32">
+        <span onclick="document.getElementById('ticketModal').style.display='none'"
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide">Congratulazioni per il tuo acquisto!</h2>
+      </header>
+      <div class="w3-container">
+
+      <a href="index.html" > <button class="w3-button w3-section">Ritorna alla homepage</button></a>
+        <p class="w3-right">Need <a href="mail.html" class="w3-text-blue">help?</a></p>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-xlarge" style="background-color:#3d3d3d">
+  <i class="fa fa-facebook-official w3-hover-opacity" style="color:#E0D4CB"></i>
+  <i class="fa fa-instagram w3-hover-opacity" style="color:#E0D4CB"></i>
+  <i class="fa fa-snapchat w3-hover-opacity" style="color:#E0D4CB"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity" style="color:#E0D4CB"></i>
+  <i class="fa fa-twitter w3-hover-opacity" style="color:#E0D4CB"></i>
+  <i class="fa fa-linkedin w3-hover-opacity" style="color:#E0D4CB"></i>
+  <p class="w3-medium" style="color:#E0D4CB">Caronteagenzia<a href="https://www.w3schools.com/w3css/default.asp" target="_blank"></a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4000);
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+</script>
+
+</body>
+</html>
