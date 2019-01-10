@@ -4,13 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <style>
 body, html {
     height: 100%;
     font-family: "avenir", sans-serif;
 }
-.learn-more-btn { background: #6e6a65; padding: 20px 40px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; color: #e0d4cb; text-transform: uppercase; letter-spacing: 1px; display: inline-block; -webkit-box-shadow: 0px 3px 0px 0px #e0d4cb; -moz-box-shadow: 0px 3px 0px 0px #e0d4cb; box-shadow: 0px 3px 0px 0px #e0d4cb; margin: 60px 0 0; font-weight: bold; }
+.learn-more-btn { background: #6e6a65; padding: 15px 25px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; color: #e0d4cb; text-transform: uppercase; letter-spacing: 1px; display: inline-block; -webkit-box-shadow: 0px 3px 0px 0px #e0d4cb; -moz-box-shadow: 0px 3px 0px 0px #e0d4cb; box-shadow: 0px 3px 0px 0px #e0d4cb; margin: 60px 0 0; font-weight: bold; }
 .learn-more-btn:hover, .learn-more-btn:focus { background: #3d3d3d; color: #e0d4cb; }
 
 .bgimg {
@@ -62,6 +65,7 @@ body, html {
           color:#E0D4CB;
         }
 
+
 </style>
 <body>
 <!-- Links (sit on top) -->
@@ -96,29 +100,35 @@ body, html {
 </header>-->
 
 <!-- Add a background color and large text to the whole page -->
-<div id="all"class="w3-large">
+<div id="all" class="w3-large">
 <div style="padding-left: 70px; padding-top:30px;padding-bottom:50px;">
   <a class="header--logo" href="index.html">
     <img src="assets/img/logo.png" style="width:120px" alt="caronte">
   </a>
 </div>
 
-<div class="w3-container">
+<div class="w3-center">
+<img   class="w3-image" style="padding-bottom:5%; max-width:628px;" src="assets/img/gifperf.gif" >
+</div>
+<!--<div class="w3-container">
     <div id="frame" class="w3-center; w3-display-container mySlides">
       <!--<h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">MANIFESTI</span></h5>-->
-         <div id="photos" class="play; w3-display-container mySlides">
+        <!-- <div id="photos" class="play; w3-display-container mySlides">
              <img src="assets/img/perf-manifesto1.png" >
              <img src="assets/img/perf-manifesto2.png" >
              <img src="assets/img/perf-manifesto3.png" >
              <img src="assets/img/perf-manifesto4.png" >
-          </div>
-        </div>
-</div>
-  <!--<img   class="w3-block" style="max-width:1100px" id="img" src="assets/img/prod-perf.png" >-->
+          </div>-->
+      <!--  </div>
+</div>-->
+
+
+
 
 
 <!-- About Container -->
 <div class="w3-container" id="about">
+
   <div class="w3-content" style="max-width:700px;">
     <h5 class="w3-center" style="padding-bottom:50px;">LA SUBLIME PERFEZIONE</h5>
 <p>Con Sublime Perfezione passerai l’eternità in un corpo perfetto, pensato per provare unicamente piacere, in un percorso verso l’apoteosi dell’esistenza umana. Dimenticherai ben presto qualsiasi forma di dolore e sofferenza, destinati a diventare solo lontani ricordi. Felicità, gioia e armonia saranno le sensazioni che ti accompagneranno lungo tutto questo viaggio, mentre il tuo corpo sarà avvolto da un’atmosfera calda e melodie rassicuranti.</p>
@@ -228,19 +238,19 @@ body, html {
      <div style="padding-top: 100px;"> <p style="text-align:center">Sei stato convinto dalla SUBLIME PERFEZIONE?</p>
     <!--   <p  style="text-align:center; padding-bottom: 60px;">Contattaci via<a href="mail.html" style="cursor:pointer;" class="w3-button"><strong>MAIL</strong></a> per concludere l'acquisto.</p>-->
 
-<section class="hero" id="hero">
-<div class="container">
+
+<div class="container w3-center">
 <div class="col-md-8 col-md-offset-2 text-center inner">
 <div class="row">
     <div class="col-md-6 col-md-offset-3 text-center">
-     <a href="buy.html" class="learn-more-btn">Buy</a>
+     <a href="buy.html" class="learn-more-btn col-md-6 col-md-offset-3 text-center">Buy</a>
     </div>
   </div>
   </div>
 </div>
-</section>
 
-     <p  style="text-align:center;padding-bottom: 60px;">Oppure, esplora le altre nostre destinazioni</p>
+
+     <p  style="text-align:center; padding-top:60px; padding-bottom: 60px;">Oppure, esplora le altre nostre destinazioni</p>
    </div>
 </div>
 
@@ -299,6 +309,9 @@ function openMenu(evt, menuName) {
   evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
 document.getElementById("myLink").click();
+
+
+
 </script>
 
 </body>
