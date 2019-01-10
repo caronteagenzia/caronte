@@ -9,7 +9,7 @@
 <style>
 body {font-family: "avenir", sans-serif}
 .mySlides {display: none}
-.learn-more-btn { background: #6e6a65; padding: 20px 40px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; color: #e0d4cb; text-transform: uppercase; letter-spacing: 1px; display: inline-block; -webkit-box-shadow: 0px 3px 0px 0px #e0d4cb; -moz-box-shadow: 0px 3px 0px 0px #e0d4cb; box-shadow: 0px 3px 0px 0px #e0d4cb; margin: 60px 0 0; font-weight: bold; }
+.learn-more-btn { background: #6e6a65; padding: 15px 25px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; color: #e0d4cb; text-transform: uppercase; letter-spacing: 1px; display: inline-block; -webkit-box-shadow: 0px 3px 0px 0px #e0d4cb; -moz-box-shadow: 0px 3px 0px 0px #e0d4cb; box-shadow: 0px 3px 0px 0px #e0d4cb; margin: 60px 0 0; font-weight: bold; }
 .learn-more-btn:hover, .learn-more-btn:focus { background: #3d3d3d; color: #e0d4cb; }
 
 * { box-sizing:border-box; }
@@ -18,7 +18,7 @@ body {font-family: "avenir", sans-serif}
 body 				 { background:url(https://scotch.io/wp-content/uploads/2014/07/61.jpg); }
 .container 		{
 
-
+  width: 80%;
   margin:30px auto 0;
   display:block;
   background:#e0d4cb;
@@ -34,11 +34,11 @@ body 				 { background:url(https://scotch.io/wp-content/uploads/2014/07/61.jpg);
   margin-bottom:45px;
 }
 input 				{
-  font-size:18px;
+  font-size:14px;
   padding:10px 10px 10px 5px;
   background:#e0d4cb;
   display:block;
-  
+  width:80%;
   border:none;
   border-bottom:1px solid #6e6a65;
 }
@@ -47,7 +47,7 @@ input:focus 		{ outline:none; }
 /* LABEL ======================================= */
 label 				 {
   color:#6e6a65;
-  font-size:18px;
+  font-size:14px;
   font-weight:normal;
   position:absolute;
   pointer-events:none;
@@ -61,12 +61,12 @@ label 				 {
 /* active state */
 input:focus ~ label, input:valid ~ label 		{
   top:-20px;
-  font-size:14px;
+  font-size:10px;
   color:#6e6a65;
 }
 
 /* BOTTOM BARS ================================= */
-.bar 	{ position:relative; display:block; width:500px; }
+.bar 	{ position:relative; display:block; width:80%; }
 .bar:before, .bar:after 	{
   content:'';
   height:2px;
@@ -150,7 +150,7 @@ punto d’incontro tra la vita e l’aldilà, tra il terreno e lo straordinario,
 <p class="w3-justify">Vogliamo infine precisare che il servizio offerto, non avendo una durata finita, è da considerarsi eterno.</p>
 
 
-<div class="container ">
+<div class="container w3-content">
   <form >
 
     <div class="group">
@@ -202,8 +202,10 @@ punto d’incontro tra la vita e l’aldilà, tra il terreno e lo straordinario,
           <div class="w3-container" style="background-color:#6e6a65; color:#E0D4CB">
             <p class="w3-center"><b>SUBLIME PERFEZIONE</b></p>
             <p class="w3-opacity w3-center">LA VIA DEL PIACERE</p>
+            <p>
             <input class="w3-check" type="checkbox" checked name="Like">
-          <label>Io scelgo questo!</label>
+          <label >Io scelgo questo!</label>
+        </p>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
@@ -211,8 +213,10 @@ punto d’incontro tra la vita e l’aldilà, tra il terreno e lo straordinario,
           <div class="w3-container" style="background-color:#6e6a65; color:#E0D4CB">
             <p class="w3-center"><b>EQUILIBRIO CELESTE</b></p>
             <p class="w3-opacity w3-center">LA VIA DELLO SPIRITO</p>
+            <p>
             <input class="w3-check" type="checkbox" checked name="Like">
             <label >Io scelgo questo!</label>
+          </p>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
@@ -220,12 +224,14 @@ punto d’incontro tra la vita e l’aldilà, tra il terreno e lo straordinario,
           <div class="w3-container" style="background-color:#6e6a65; color:#E0D4CB">
             <p class="w3-center"><b>ETERNO RISCATTO</b></p>
             <p class="w3-opacity w3-center">LA VIA DEL SACRIFICIO</p>
+            <p>
             <input class="w3-check" type="checkbox" checked name="Like">
             <label >Io scelgo questo!</label>
+          </p>
           </div>
         </div>
       </div>
-      <button class="learn-more-btn w3-center" onclick="document.getElementById('ticketModal').style.display='block'">Determina</button>
+      <button class="learn-more-btn "  onclick="document.getElementById('ticketModal').style.display='block'">Determina</button>
 
     </div>
 
