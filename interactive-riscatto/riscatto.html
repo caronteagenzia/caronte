@@ -61,6 +61,9 @@
     </div>
 
     <script>
+      
+      document.addEventListener('touchmove', function() { e.preventDefault(); }, { passive:false });
+      
       var s = function( sketch ) {
 
       var sqr;
