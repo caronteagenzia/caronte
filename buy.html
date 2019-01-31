@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="./js/jqueryDani.min.js"></script>
 <style>
 body {font-family: "avenir", sans-serif}
 .mySlides {display: none}
@@ -244,7 +245,8 @@ punto d’incontro tra la vita e l’aldilà, tra il terreno e lo straordinario,
 
       </div>
       <div class="w3-center">
-      <button class="learn-more-btn"  onclick="document.getElementById('ticketModal').style.display='block'">Concludi</button>
+      <!--<button id="btnConcludi" class="learn-more-btn"  onclick="document.getElementById('ticketModal').style.display='block'">Concludi</button>-->
+      <button id="btnConcludi" class="learn-more-btn"  onclick="showInteractiveRiscatto()">Concludi</button>
 </div>
 
     </div>
@@ -288,6 +290,7 @@ punto d’incontro tra la vita e l’aldilà, tra il terreno e lo straordinario,
 </footer>
 
 <script>
+
 // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
 carousel();
@@ -320,6 +323,10 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+function showInteractiveRiscatto() {
+  window.location.href = './interactive-riscatto/riscatto.html'
 }
 
 

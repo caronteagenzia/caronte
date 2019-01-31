@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<script src="./js/jqueryDani.min.js"></script>
 <style>
 body, html {
     height: 100%;
@@ -231,7 +232,7 @@ body, html {
        <div class="col-md-8 col-md-offset-2 text-center inner">
        <div class="row">
            <div class="col-md-6 col-md-offset-3 text-center">
-            <a href="buy.html" class="learn-more-btn col-md-6 col-md-offset-3 text-center">ho scelto</a>
+            <a id="btnAcquisto" href="buy.html" class="learn-more-btn col-md-6 col-md-offset-3 text-center">ho scelto</a>
            </div>
          </div>
          </div>
@@ -273,8 +274,20 @@ body, html {
 <!--<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>-->
-
 <script>
+
+  $(document).ready(function(){
+
+    $('#btnAcquisto').on('click', function(e){
+
+      if( sessionStorage.getItem('interactiveVar') == 'riscatto' ){
+        e.preventDefault();
+        // riscatto già comprato, blocato
+      }
+    })
+
+  })
+
 // Tabbed Menu
 function openMenu(evt, menuName) {
   var i, x, tablinks;
