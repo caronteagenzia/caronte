@@ -62,7 +62,7 @@
 
     <script>
       
-      document.addEventListener('touchmove', function() { e.preventDefault(); }, { passive:false });
+      //document.addEventListener('touchmove', function() { e.preventDefault(); }, { passive:false });
       
       var s = function( sketch ) {
 
@@ -241,6 +241,10 @@
 
 
       $(document).ready(function(){
+        
+        $(document).on('touchmove', function(e){
+          e.preventDefault();
+        });
 
         $('#cerchio-1 img').attr('draggable', false);
         $('#cerchio-2 img').attr('draggable', false);
