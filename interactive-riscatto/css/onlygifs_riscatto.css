@@ -1,0 +1,106 @@
+@font-face {
+       font-family: AvenirRoman;
+       src: url(./font/AvenirLTStd-Roman.otf);
+     }
+
+     .visible{
+      display: block !important;
+     }
+
+      body{
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+        overflow: hidden;
+      }
+
+      #animazione-portale{
+            position: absolute;
+            z-index: 9999;
+            left: -200%;
+      }
+
+      #interactiveCanvas{
+        position: relative;
+        width: 120px;
+        height: 100vh;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      #gifElements{
+            position: absolute;
+            width: 120px;
+            height: 100vh;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0%;
+            z-index: 9999;
+      }
+
+      #linea{
+        position: absolute;
+        left: 50%;
+        height: 100vh;
+        transform: translateX(-50%);
+      }
+
+      #linea img{
+        position: relative;
+        height: 100%;
+      }
+
+      #cerchio-1{
+        position: absolute;
+        width: 100%;
+      }
+
+      #cerchio-1 .cerchio{
+        position: absolute;
+        width: 100%;
+      }
+
+      #cerchio-1 .cerchio_linea{
+        position: absolute;
+        width: 100%;
+        z-index: 999;
+        opacity:0
+      }
+
+      #cerchio-2{
+            position: absolute;
+            bottom: 0%;
+            width: 100%;
+      }
+
+      #cerchio-2 .onde{
+        position: relative;
+        width: 100%;
+        opacity: 0;
+      }
+
+      #endingAnimation{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+      }
+      #ending-riscatto{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      #txt-riscatto{
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 32px;
+        font-family: 'AvenirRoman', sans-serif;
+      }
+
+      #portale-finale-1{
+        position: absolute;
+        width: 100%;
+      }
