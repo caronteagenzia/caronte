@@ -164,7 +164,12 @@
           }})
             setTimeout( function(){
               TweenLite.to('#endingAnimation', 1, {opacity: 1, onComplete: function(){
-                TweenLite.to('#ending-riscatto', 1, {opacity: 1} )
+                TweenLite.to('#ending-riscatto', 1, {opacity: 1, onComplete: function(){
+                  sessionStorage.setItem("interactiveVar", "riscatto");
+                  $('#ending-riscatto').on('click', function(){
+                    window.location.href = "../desti-risca.html";
+                  })
+                }} )
                 TweenLite.to('#txt-riscatto', 1, {opacity: 1} )
               }})
             }, 9000)
