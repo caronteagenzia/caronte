@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Caronte - Firma</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style>
+	body{
+		margin: 0px;
+		overflow: hidden;
+		position: fixed;
+	}
+
+	#btn-hofinito{
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		background-color: #dfd4ca;
+		height: 80px;
+		width: 230px;
+		cursor: pointer;
+		text-align: center;
+		color: #3d3d3d;
+		font-family: 'AvenirLTStdHeavy', sans-serif;
+		font-size: 21px;
+		line-height: 85px;
+	}
+
+	.btn-hidden{
+		display: none !important;
+	}
+
+	#indicazioni-firma{
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		transform: translateX(-50%);
+		font-family: 'AvenirLTStdHeavy', sans-serif;
+		font-size: 21px;
+	}
+	</style>
+	<script type="text/javascript" src="./jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="./p5.min.js"></script>
+</head>
+<body>
+		<p id="indicazioni-firma">Firmi qui</p>
+		<button id="btn-hofinito" class="btn-hidden" type="button">HO FINITO</button>
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+				$('#btn-hofinito').on('click', function(){
+					window.location.href = './fine-firma.html'
+				})
+			})
+
+			function setup() {
+	 				createCanvas(windowWidth, windowHeight);
+	 				frameRate(60);
+	  				background(225);
+	  		}
+
+			function draw() {
+	  				if (mouseIsPressed === true) {
+	    				stroke(0)
+	    				strokeWeight(18)
+	    				line(mouseX, mouseY, pmouseX, pmouseY);
+
+	    				document.getElementById('btn-hofinito').classList.remove("btn-hidden");
+	  				}
+			}
+		</script>
+</body>
+</html>

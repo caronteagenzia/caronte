@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		.hidden-view{
+			display: none;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+	
+	<div class="view start">
+		<p class="testo">
+			La ringraziamo del suo tempo, più di ogni altra cosa
+		</p>
+		<button id="btn-end" class="ui-btn btn-end" type="button" style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%);">FINE</button>
+	</div>
+
+	
+	
+	
+
+	<script src="jquery-3.3.1.js"></script>
+	<script src="./paho-mqtt.js"></script>
+	<script type="text/javascript">
+		
+		var host = 'm24.cloudmqtt.com';
+		var user = 'txyosdvw';
+		var psw = 'fM6R-UZSkeN3';
+		var port = 38333;
+		var canale = 'caronte_tablet';
+		var clientId = 'tablet';
+
+		function onConnect() {
+			client.subscribe(canale);
+			sendMessage(clientId, 'ignora')
+		}
+
+		function sendMessage(clientId, message) {
+				if( !client.isConnected() )
+					return;
+
+				var preparedMessage = '';
+				preparedMessage += '^'+clientId;
+				preparedMessage += '^'+message;
+
+				var messaggio = new Paho.Message(preparedMessage);
+				messaggio.destinationName = canale;
+				client.send(messaggio);
+			}
+
+			function arrivoMessaggio( receivedMessage ) {
+			}
+
+			function onMessageDelivered( message ){
+				console.log('messaggio inviato: '+message.payloadString)
+			}
+
+			function doFail( error ) {
+				console.log('fail connect')
+			}
+
+			$(document).ready(function(){
+
+			client = new Paho.Client(host, port, "/ws", clientId);
+			client.onMessageArrived = arrivoMessaggio;
+		    client.onMessageDelivered = onMessageDelivered;
+
+		    var options = {
+		    	userName: user,
+		    	password: psw,
+		    	onSuccess: onConnect,
+		    	onFailure: doFail,
+		    	useSSL: true,
+		    }
+
+		    client.connect(options);
+			console.log(client)
+
+			$('#btn-end').on('click', function(){
+				window.location.href = './index2.html'
+			})
+		})
+
+	</script>
+</body>
+</html>

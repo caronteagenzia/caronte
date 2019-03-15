@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Caronte Agenzia - Oltrevita</title>
+	<style>
+
+	@font-face {
+    font-family: 'AvenirLTStdBook';
+    src: url('./fonts/AvenirLTStd-Book.otf');
+	}
+	@font-face {
+	    font-family: 'AvenirLTStdLight';
+	    src: url('./fonts/AvenirLTStd-Light.otf');
+	}
+	@font-face {
+	    font-family: 'AvenirLTStdHeavy';
+	    src: url('./fonts/AvenirLTStd-Heavy.otf');
+	}
+
+	body{
+		background-color: #3d3d3d;
+	}
+
+	.logo {
+		position: absolute;
+		bottom: 10%;
+		left: 50%;
+		width: 80px;
+		transform: translateX(-50%);
+	}
+
+	.logo img{
+		position: relative;
+		width: 100%;
+	}
+
+	.testo {
+		text-align: center;
+		font-family: 'AvenirLTStdBook', sans-serif;
+		font-size: 25px;
+		color: #dfd4ca;
+		position: relative;
+	}
+
+	.ui-btn{
+		background-color: #dfd4ca;
+		height: 80px;
+		width: 230px;
+		cursor: pointer;
+		text-align: center;
+		color: #3d3d3d;
+		font-family: 'AvenirLTStdHeavy', sans-serif;
+		font-size: 21px;
+		line-height: 85px;
+	}
+
+	.ui-btn:active{
+		opacity: 0.7;
+	}
+
+	.two-btn{
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.other-products{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-55%);
+	}
+
+	.product{
+		position: relative;
+		display: inline-block;
+	}
+
+	.product h4{
+		text-align: center;
+		font-size: 12px;
+		font-family: 'AvenirLTStdHeavy', sans-serif;
+		color: #dfd4ca;
+	}
+
+	.product-1{
+		position: relative;
+		margin-right: 20px;
+	}
+
+	.product-2{
+		position: relative;
+		margin-left: 20px;
+	}
+
+	.product-1 > img{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+    	width: 100px;
+    	height: 100px;
+	}
+
+	.product-2 > img{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+    	width: 100px;
+    	height: 100px;
+	}
+
+	</style>
+</head>
+<body>
+
+	<div class="two-btn">
+			<button id="btn-sottoscrivicontratto" class="ui-btn btn-1" type="button">Sottoscrivi contratto</button>
+			<button id="btn-nonmiinteressa" class="ui-btn btn-2" type="button">Non mi interessa</button>
+	</div>
+	
+	<div style="position: absolute; top: 40%; width: 100%;">
+		<p class="testo">Non la soddisfa? Provi questi altri nostri prodotti</p>
+		<div class="other-products">
+			<div id="btn-prod1" class="product product-1">
+				<h4>Eterno Riscatto</h4>
+				<img src="./images/mesh_riscatto.png">
+			</div>
+			<div id="btn-prod2" class="product product-2">
+				<h4>Equilibrio Celeste</h4>
+				<img src="./images/mesh_equilibrio.png">
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="logo">
+			<img src="images/logo.png">
+		</div>
+	</div>
+
+
+	<script src="jquery-3.3.1.js"></script>
+	<script src="./paho-mqtt.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$('#btn-sottoscrivicontratto').on('click', function(){
+				window.location.href = './firma-tablet.html'
+			})
+
+			$('#btn-prod1').on('click', function(){
+				window.location.href = './ending-2.html'
+			})
+
+			$('#btn-prod2').on('click', function(){
+				window.location.href = './ending-3.html'
+			})
+
+			$('#btn-nonmiinteressa').on('click', function(){
+				window.location.href = './not-interested.html'
+			})
+		})
+	</script>
+</body>
+</html>

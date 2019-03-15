@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		.hidden-view{
+			display: none;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/final-2.css">
+</head>
+<body>
+
+	<div class="view final">
+		<div id="ending-1" class="container-risultato">
+			<p class="testo">L'oltrevita che ti consigliamo è</p>
+			<div class="result-box">
+				<img src="images/mesh_perfezione.png">
+				<p class="title-ending">SUBLIME PERFEZIONE</p>
+				<p class="desc-ending">LA VIA DEL PIACERE</p>
+			</div>
+			<p class="testo-2">Estrai l'obolo dall'urna di questo oltrevita e attraversa il portale.</p>
+		</div>
+	</div>
+	
+	
+
+	<script src="jquery-3.3.1.js"></script>
+	<script src="./paho-mqtt.js"></script>
+	<script>
+		var host = 'm24.cloudmqtt.com';
+		var user = 'txyosdvw';
+		var psw = 'fM6R-UZSkeN3';
+		var port = 38333;
+		var canale = 'caronte_tablet';
+		var clientId = 'tablet';
+		var client;
+
+		var options = {
+		    userName: user,
+		    password: psw,
+		    onSuccess: onConnect,
+		    onFailure: doFail,
+		    useSSL: true,
+		}
+
+		function sendMessage(clientId, message) {
+			if( !client.isConnected() ){
+				console.log('not connected')
+				return;
+			}
+
+			var preparedMessage = '';
+			preparedMessage += '^'+clientId;
+			preparedMessage += '^'+message;
+
+			var messaggio = new Paho.Message(preparedMessage);
+			messaggio.destinationName = canale;
+			client.send(messaggio);
+		}
+
+		function arrivoMessaggio( receivedMessage ) {
+			var explodedMessage = receivedMessage.payloadString.split('^');
+
+				switch( explodedMessage[explodedMessage.length-1] ){
+					case 'videofinished':
+						window.location.href = './final-1.html'
+					break;
+
+					default:
+					break;
+				}
+		}
+
+		function onMessageDelivered( message ){
+			console.log('messaggio inviato: '+message.payloadString)
+		}
+
+		function onConnect() {
+			console.log('connected')
+			sendMessage(clientId, 'video-sublime')
+			client.subscribe(canale);
+		}
+
+		function doFail( error ) {
+			console.log('fail connect')
+		}
+
+		$(document).ready(function(){
+			client = new Paho.Client(host, port, "/ws", clientId);
+			client.onMessageArrived = arrivoMessaggio;
+		    client.onMessageDelivered = onMessageDelivered;
+			client.connect(options);
+		})
+
+	</script>
+</body>
+</html>
