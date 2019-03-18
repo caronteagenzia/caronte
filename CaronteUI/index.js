@@ -262,7 +262,7 @@ $(document).ready(function(){
 			}
 			
 			// equilibrio / [perfezione]
-			if( pnt_equilibrio_celeste == pnt_equilibrio_celeste ){
+			if( pnt_equilibrio_celeste == pnt_sublime_perfezione ){
 				window.location.href = './ending-1.html'
 			}
 
