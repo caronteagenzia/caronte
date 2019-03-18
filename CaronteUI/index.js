@@ -260,6 +260,11 @@ $(document).ready(function(){
 				//$('#ending-3').addClass('ending-shown')
 				window.location.href = './ending-3.html'
 			}
+			
+			// equilibrio / [perfezione]
+			if( pnt_equilibrio_celeste == pnt_equilibrio_celeste ){
+				window.location.href = './ending-1.html'
+			}
 
 		}
 
