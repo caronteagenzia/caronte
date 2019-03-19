@@ -265,6 +265,26 @@ $(document).ready(function(){
 			if( pnt_equilibrio_celeste == pnt_sublime_perfezione ){
 				window.location.href = './ending-1.html'
 			}
+			
+			if( pnt_equilibrio_celeste == pnt_eterno_riscatto ){
+				window.location.href = './ending-3.html'
+			}
+			
+			if( pnt_sublime_perfezione == pnt_equilibrio_celeste ){
+				window.location.href = './ending-3.html'
+			}
+			
+			if( pnt_sublime_perfezione == pnt_eterno_riscatto ){
+				window.location.href = './ending-1.html'
+			}
+			
+			if( pnt_eterno_riscatto == pnt_equilibrio_celeste ){
+				window.location.href = './ending-3.html'
+			}
+			
+			if( pnt_eterno_riscatto == pnt_sublime_perfezione ){
+				window.location.href = './ending-1.html'
+			}
 
 		}
 
